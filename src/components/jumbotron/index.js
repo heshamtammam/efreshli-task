@@ -1,8 +1,11 @@
 import React from "react";
-import PercentCircle from "./percent-circle";
 import styled from "@emotion/styled";
 
+import PercentCircle from "./percent-circle";
+
 const StyledTitle = styled.h2({
+  width: "80%",
+  margin: "auto",
   fontSize: 22,
   lineHeight: "28px",
   letterSpacing: -0.92,
@@ -14,10 +17,12 @@ const StyledTitle = styled.h2({
 
 const Jumbotron = ({ percent, title, subTitle }) => {
   return (
-    <div className="text-center">
+    <div className="text-center mb-5">
       <PercentCircle percent={percent} />
       <StyledTitle>{title}</StyledTitle>
-      <p className="text-muted">{subTitle}</p>
+      <p className="text-muted m-auto" style={{ width: "80%" }}>
+        {subTitle}
+      </p>
     </div>
   );
 };

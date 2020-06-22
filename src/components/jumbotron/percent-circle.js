@@ -1,10 +1,22 @@
 import React from "react";
-import styled from "@emotion/styled";
 
-const StyledWrapper = styled.div({});
+import "./percent-circle.css";
 
 const PercentCircle = ({ percent }) => {
-  return <StyledWrapper>percent : {percent}</StyledWrapper>;
+  return (
+    <>
+      <div className="wrapper">
+        <div className={`c100 p${percent} blue`}>
+          <span>{percent}%</span>
+
+          <div className="slice">
+            <div className="bar"></div>
+            <div className="fill"></div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default PercentCircle;
